@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<h2>Login</h2>
+
+<form method='post'>
+        {% csrf_token %}  <!-- this is a security thing -->
+        {{ form.as_p}} <!-- this is to tell we want nes fields as <p> -->
+        <button type ="submit">Login</button>
+</form>
+
+
+{% endblock %}
