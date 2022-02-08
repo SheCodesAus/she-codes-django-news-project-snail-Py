@@ -11,10 +11,6 @@
     <h2>{{ story.title }}</h2>
     <h4>{{ story.author }}</h4>
 
- <!-- Add an edit button for logged in users -->
-    {% if request.user.is_authenticated %}
-        <a href="{% url 'news:editStory' %}">Edit this story</a>  
-    {% endif %}
 
 
     <div id="story-content">
