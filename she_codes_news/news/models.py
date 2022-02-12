@@ -14,3 +14,11 @@ class NewsStory(models.Model):
     pub_date = models.DateTimeField()
     content = models.TextField()
 
+
+    tag_choices = (
+        ("Cats", "Cats"),
+        ("Dogs", "Dogs"),
+        ("News", "News")
+    )
+   
+    tag = models.CharField(max_length=200, choices = tag_choices, default="News")
