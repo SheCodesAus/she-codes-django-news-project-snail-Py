@@ -14,7 +14,6 @@ class NewsStory(models.Model):
     pub_date = models.DateTimeField()
     content = models.TextField()
 
-
     tag_choices = (
         ("Cats", "Cats"),
         ("Dogs", "Dogs"),
