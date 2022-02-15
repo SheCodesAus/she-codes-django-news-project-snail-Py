@@ -1,3 +1,7 @@
 # Plus Resources: Django Project Starter
 
-Starter code for the Plus Django project.
+Hey Hayley, check out my Dango app: https://afternoon-garden-24854.herokuapp.com/news/
+
+
+user: user
+password: password
