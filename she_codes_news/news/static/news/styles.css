@@ -13,9 +13,9 @@
 #latest-stories {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 1px 1px;
-    grid-template-areas: "left-1 right-1" "left-1 right-2" "left-1 right-3";
+    grid-template-areas: "left-1 right-1" "left-1 right-2";
     max-height: 500px;
 }
 
@@ -31,13 +31,12 @@
     grid-area: right-2;
 }
 
-#story-card-4 {
+/* #story-card-4 {
     grid-area: right-3;
-}
+} */
 
 #story-card-2 a,
-#story-card-3 a,
-#story-card-4 a {
+#story-card-3 a,{
     display: flex;
     max-height: 120px;
     width: 100%;
@@ -45,20 +44,17 @@
 }
 
 #story-card-2 .story-card-text h3,
-#story-card-3 .story-card-text h3,
-#story-card-4 .story-card-text h3 {
+#story-card-3 .story-card-text h3, {
     font-size: 16px;
 }
 
 #story-card-2 .story-card-text h4,
-#story-card-3 .story-card-text h4,
-#story-card-4 .story-card-text h4 {
+#story-card-3 .story-card-text h4,{
     font-size: 12px;
 }
 
 #story-card-2 img,
-#story-card-3 img,
-#story-card-4 img {
+#story-card-3 img, {
     width: 33%;
     height: 100%;
     margin-right: 5px;

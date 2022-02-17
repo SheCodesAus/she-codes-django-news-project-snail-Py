@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-
+from datetime import datetime
 
 class NewsStory(models.Model):
     title = models.CharField(max_length=200)
@@ -11,7 +11,7 @@ class NewsStory(models.Model):
 
     )
 
-    pub_date = models.DateTimeField()
+    pub_date = models.DateTimeField(default=datetime.now)
     content = models.TextField()
 
     tag_choices = (
