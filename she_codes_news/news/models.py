@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-from datetime import datetime
+from django.utils import timezone
 
 class NewsStory(models.Model):
     title = models.CharField(max_length=200)
@@ -11,7 +11,8 @@ class NewsStory(models.Model):
 
     )
 
-    pub_date = models.DateTimeField(default=datetime.now)
+    pub_date = models.DateTimeField(blank=True)
+
     content = models.TextField()
 
     tag_choices = (
@@ -21,3 +22,5 @@ class NewsStory(models.Model):
     )
    
     tag = models.CharField(max_length=200, choices = tag_choices, default="News")
+    
+    image = models.URLField(null=True, blank=True, default='https://picsum.photos/600')
