@@ -4,6 +4,7 @@ from .models import NewsStory
 from django.utils import timezone, dateformat
 
 
+
 class StoryForm(ModelForm):
      class Meta:
          model = NewsStory
@@ -12,3 +13,4 @@ class StoryForm(ModelForm):
 attrs={'class':'form-control', 'placeholder':'Select a date',
 'type':'date', "value": dateformat.format(timezone.now(), 'Y-m-d')}),
 }
+

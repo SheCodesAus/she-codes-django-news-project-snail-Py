@@ -7,7 +7,7 @@ class NewsStory(models.Model):
 
     author = models.ForeignKey (
         get_user_model(),
-        on_delete =models.CASCADE     # When deleting the cat, delete all the kittens
+        on_delete =models.CASCADE     # When killing the cat, don't forget to kill all the kittens as well
 
     )
 
@@ -16,8 +16,9 @@ class NewsStory(models.Model):
     content = models.TextField()
 
     tag_choices = (
-        ("Cats", "Cats"),
-        ("Dogs", "Dogs"),
+       ("Basic feature", "Basic feature"),
+        ("Additional feature", "Additional feature"),
+        ("Cool stuff", "Cool stuff"),
         ("News", "News")
     )
    

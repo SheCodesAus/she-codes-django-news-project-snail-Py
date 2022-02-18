@@ -10,7 +10,7 @@
 <div id="story-wrapper">
     <h2>{{ story.title }}</h2>
     <h4>Written by: {{ story.author }}</h4>
-    <h4>Category: {{ story.tag }}</h4>
+    <h4>Published on: {{ story.pub_date }}, in <a href="#">{{ story.tag }}</a></h4>
 
 
 
@@ -20,5 +20,16 @@
         {{ story.content|linebreaks }}
     </div>
 </div>
+
+ <!-- Add an edit button for logged in users -->
+ {% if request.user.is_authenticated %}
+ <a href="{% url 'news:editStory' story.id %}">[Edit this story]</a>  
+ {% endif %}
+
+ <!-- Add an delete button for logged in users -->
+ {% if request.user.is_authenticated %}
+ <a href="{% url 'news:deleteStory' story.id %}">[Delete]</a>  
+ {% endif %}
+     </div>
 
 {% endblock %}
