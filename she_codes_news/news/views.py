@@ -1,8 +1,8 @@
+from django.test import tag
 from django.views import generic
 from django.urls import reverse_lazy
 from .models import NewsStory
 from .forms import StoryForm
-
 
 class IndexView(generic.ListView):
     template_name = 'news/index.html'
@@ -44,3 +44,16 @@ class DeleteStoryView(generic.DeleteView):
     model = NewsStory
     template_name = 'news/deleteStory.html'
     success_url = reverse_lazy('news:index')
+
+
+class CategoryView(generic.DetailView):
+    model = NewsStory
+    template_name = 'news/category.html'
+    context_object_name = 'category'
+
+    
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['all_stories'] = NewsStory.objects.filter(tag=self.kwargs['tag_choices'])
+    #     return context
+

@@ -8,5 +8,3 @@ urlpatterns = [
      path('create-account/', views.CreateAccountView.as_view(),name='createAccount'),
      path('<int:pk>/profile/', views.ProfileView.as_view(), name='profile'),
 ]
-
-# {% url 'users:profile' story.author %}
