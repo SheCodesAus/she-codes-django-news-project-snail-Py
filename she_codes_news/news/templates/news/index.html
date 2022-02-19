@@ -14,6 +14,17 @@
     {% endif %}
 
 
+    {% comment %} Dymacally adds categories  {% endcomment %}
+
+    <div id="all-tags">
+
+        {% for tag in all_tags %}
+         <a href="{% url 'news:tag' tag.slug %}">{{ tag }}</a>
+        {% endfor %}
+
+    </div>
+
+
     <div id="latest-stories">
         {% if latest_stories %}
             {% for story in latest_stories %}
