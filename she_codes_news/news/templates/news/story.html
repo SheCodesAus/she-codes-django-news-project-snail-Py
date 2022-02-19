@@ -10,7 +10,7 @@
 <div id="story-wrapper">
     <h2>{{ story.title }}</h2>
     <h4>Written by: {{ story.author }}</h4>
-    <h4>Published on: {{ story.pub_date|date:'Y-m-d' }}, in <a href="{% url 'news:category' story.tag %}">{{ story.get_tag_display }}</a></h4>
+    <h4>Published on: {{ story.pub_date|date:'Y-m-d' }}, in <a href="{% url 'news:tag' story.tag %}">{{ story.tag }}</a></h4>
 
 
     <div id="story-content">

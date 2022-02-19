@@ -2,12 +2,12 @@
 
 {% block content %}
 
-<h2>Read all articles about {{ story.tag }}</h2>
+<h2>Read all articles about {{ tag }}</h2>
 
 <div id="all-stories">
 
-    {% if all_stories %}
-        {% for story in all_stories %}
+    {% if tag.stories.all %}
+        {% for story in tag.stories.all %}
             {% include "news/storyCard.html" %}
         {% endfor %}
     {% else %}

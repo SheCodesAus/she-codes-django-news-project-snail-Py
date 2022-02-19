@@ -2,7 +2,7 @@ from tokenize import String
 from django.test import tag
 from django.views import generic
 from django.urls import reverse_lazy
-from .models import NewsStory
+from .models import NewsStory, Tag
 from .forms import StoryForm
 
 class IndexView(generic.ListView):
@@ -45,17 +45,25 @@ class DeleteStoryView(generic.DeleteView):
     model = NewsStory
     template_name = 'news/deleteStory.html'
     success_url = reverse_lazy('news:index')
-    
-
-class CategoryView(generic.ListView):
-    template_name = 'news/category.html'
-
-    def get_queryset(self):
-        '''Return all news stories.'''
-        return NewsStory.objects.all()
 
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['all_stories'] = NewsStory.objects.filter(tag__iexact=self.kwargs['tag'])
-        return context
+class TagView(generic.DetailView):
+    # template_name = 'news/category.html'
+    model = Tag
+
+
+
+
+ 
+# class CategoryView(generic.ListView):
+#     template_name = 'news/category.html'   
+
+    # def get_queryset(self):
+    #     '''Return all news stories.'''
+    #     return NewsStory.objects.all()
+
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['all_stories'] = NewsStory.objects.filter(tag__iexact=self.kwargs['tag'])
+    #     return context
