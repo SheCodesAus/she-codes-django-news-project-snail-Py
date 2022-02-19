@@ -16,10 +16,10 @@ class NewsStory(models.Model):
     content = models.TextField()
 
     tag_choices = (
-       ("Basic feature", "Basic feature"),
-        ("Additional feature", "Additional feature"),
-        ("Cool stuff", "Cool stuff"),
-        ("News", "News")
+       ("basic-feature", "Basic feature"),
+        ("additional-feature", "Additional feature"),
+        ("cool-stuff", "Cool stuff"),
+        ("news", "News")
     )
    
     tag = models.CharField(max_length=200, choices = tag_choices, default="News")

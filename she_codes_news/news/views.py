@@ -1,3 +1,4 @@
+from tokenize import String
 from django.test import tag
 from django.views import generic
 from django.urls import reverse_lazy
@@ -44,16 +45,17 @@ class DeleteStoryView(generic.DeleteView):
     model = NewsStory
     template_name = 'news/deleteStory.html'
     success_url = reverse_lazy('news:index')
-
-
-class CategoryView(generic.DetailView):
-    model = NewsStory
-    template_name = 'news/category.html'
-    context_object_name = 'category'
-
     
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['all_stories'] = NewsStory.objects.filter(tag=self.kwargs['tag_choices'])
-    #     return context
 
+class CategoryView(generic.ListView):
+    template_name = 'news/category.html'
+
+    def get_queryset(self):
+        '''Return all news stories.'''
+        return NewsStory.objects.all()
+
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['all_stories'] = NewsStory.objects.filter(tag__iexact=self.kwargs['tag'])
+        return context
