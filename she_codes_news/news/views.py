@@ -53,8 +53,6 @@ class TagView(generic.DetailView):
     model = Tag
 
 
-
-
  
 # class CategoryView(generic.ListView):
 #     template_name = 'news/category.html'   
