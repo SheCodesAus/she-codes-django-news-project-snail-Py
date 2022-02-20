@@ -6,19 +6,19 @@
     {% endblock %}
 
     {% block content %}
-
-        <h2>Browse articles by topic: 
     
-            <div class="all-tags">
+    
+        <div class="all-tags">
 
+        <h2>Browse articles by topic:</h2> 
 
             {% for tag in all_tags %}
             <a href="{% url 'news:tag' tag.slug %}">{{ tag.title }}</a>
-            {% endfor %} </h2>
+            {% endfor %} 
 
             </div>
 
-        
+{% comment %}         
             <h2>Latest stories</h2>
 
 
@@ -32,7 +32,7 @@
                 <p>No stories are available.</p>
             {% endif %}
 
-        </div>
+        </div> {% endcomment %}
 
         <h2>All stories</h2>
 

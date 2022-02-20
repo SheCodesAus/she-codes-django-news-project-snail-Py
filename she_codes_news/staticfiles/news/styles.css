@@ -1,11 +1,13 @@
+.all_tags {
+    text-align: center;
+}
+
 .all-tags a {
-    
-    color: white;
+    color: rgb(150, 146, 146);
     text-decoration: none;
     border: solid;
     border-color:#006466;
     background-color: #006466;
-
     padding: 4px;
     margin: 1px;
     border-radius:5%;
