@@ -24,9 +24,14 @@ h2 {
 }
 
 h3 {
-    font-family: 'Montserrat', sans-serif; 
+       font-family: 'Montserrat', sans-serif; 
+
     font-size: 2rem;
     margin: 0;
+}
+
+h4 {
+    font-family: 'Robotto', sans-serif; 
 }
 
 #header-text {
@@ -41,7 +46,7 @@ nav {
     align-items: flex-end;
 }
 
-a {
+nav a, h1 a, h3 a {
     margin: 2px;
     text-decoration: none;
     color: #000;

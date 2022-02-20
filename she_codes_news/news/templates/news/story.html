@@ -14,20 +14,17 @@
 
 
     <div id="story-content">
-        <img src="{{ story.image }}">
-        {{ story.content|linebreaks }}
+            <img src="{{ story.image }}">{{ story.content|linebreaks }}
+            
+            {% if request.user.is_authenticated %}
+            <h4><b><a href="{% url 'news:editStory' story.id %}">[Edit this story]</a></b>
+            {% endif %}
+
+            {% if request.user.is_authenticated %}
+            <b><a href="{% url 'news:deleteStory' story.id %}">[Delete]</a></b></h4> 
+            {% endif %}
     </div>
+
 </div>
-
- <!-- Add an edit button for logged in users -->
- {% if request.user.is_authenticated %}
- <h4><a href="{% url 'news:editStory' story.id %}">[Edit this story]</a></h4>  
- {% endif %}
-
- <!-- Add an delete button for logged in users -->
- {% if request.user.is_authenticated %}
- <h4><a href="{% url 'news:deleteStory' story.id %}">[Delete]</a> </h4> 
- {% endif %}
-     </div>
 
 {% endblock %}
