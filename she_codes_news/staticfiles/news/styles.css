@@ -1,8 +1,8 @@
-.all_tags {
+#all-tags {
     text-align: center;
 }
 
-.all-tags a {
+#all-tags a {
     color: rgb(150, 146, 146);
     text-decoration: none;
     border: solid;
@@ -13,7 +13,7 @@
     border-radius:5%;
 }
       
-.all-tags a:hover { 
+#all-tags a:hover { 
     font-family: 'Montserrat', sans-serif; 
     border: solid;
     border-color:white;
