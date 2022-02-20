@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
@@ -5,6 +6,7 @@ from django.utils import timezone
 
 class Tag(models.Model):
     slug = models.SlugField()
+    title = models.CharField(max_length=200, default='news')
 
     def __str__(self) -> str:
         return self.slug

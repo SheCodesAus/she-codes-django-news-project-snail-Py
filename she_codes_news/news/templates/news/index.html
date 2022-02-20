@@ -11,10 +11,10 @@
 
      <div class="all-tags">
 
-    <h2>Browse articles by topic:</h2>
+    <h2>Browse articles by topic: </h2>
 
         {% for tag in all_tags %}
-         <a href="{% url 'news:tag' tag.slug %}">{{ tag }}</a>
+         <a href="{% url 'news:tag' tag.slug %}">{{ tag.title }}</a>
         {% endfor %}
 
     </div>

@@ -50,7 +50,6 @@ class DeleteStoryView(generic.DeleteView):
 
 
 class TagView(generic.DetailView):
-    # template_name = 'news/category.html'
     model = Tag
 
 

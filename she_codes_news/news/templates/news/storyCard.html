@@ -8,7 +8,7 @@
                 <h3>{{ story.title }}</h3>
         <a href="{% url 'users:profile' story.author.id %}"></a>
                 <h4>Written by: {{ story.author }}</h4>
-                <h4>Published on: {{ story.pub_date|date:'Y-m-d' }}, in <a href="{% url 'news:tag' story.tag %}">{{ story.tag }}</a></h4>
+                <h4>Published on: {{ story.pub_date|date:'Y-m-d' }}, in <a href="{% url 'news:tag' story.tag %}">{{ story.tag.title }}</a></h4>
     
         <!-- Add an edit button for logged in users -->
         {% if request.user.is_authenticated %}
