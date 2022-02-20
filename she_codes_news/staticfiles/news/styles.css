@@ -1,8 +1,38 @@
+.all-tags a {
+    
+    color: white;
+    text-decoration: none;
+    border: solid;
+    border-color:#006466;
+    background-color: #006466;
+
+    padding: 4px;
+    margin: 1px;
+    border-radius:5%;
+}
+      
+.all-tags a:hover { 
+    font-family: 'Montserrat', sans-serif; 
+    border: solid;
+    border-color:white;
+    border-radius:5%;
+    background: #FDCFA5;
+    color: black;
+    font-weight: bold;
+}
+
+
 .story-card {
     margin: 2px;
-    border: 1px solid #000;
+    border: 1px solid #006466;
     padding: 5px;
+    radius: 5%;
+  
+}
+
+.story-card-text {
     flex: auto;
+    display:flex;
 }
 
 .story-card img {

@@ -7,16 +7,19 @@
 
     {% block content %}
 
-     {% comment %} Dynamically adds categories  {% endcomment %}
-
-
         <h2>Browse articles by topic: 
+    
+            <div class="all-tags">
+
 
             {% for tag in all_tags %}
             <a href="{% url 'news:tag' tag.slug %}">{{ tag.title }}</a>
             {% endfor %} </h2>
 
-            <h2>Latest News</h2>
+            </div>
+
+        
+            <h2>Latest stories</h2>
 
 
         <div id="latest-stories">
@@ -31,10 +34,11 @@
 
         </div>
 
-       <h2>All News</h2>
+        <h2>All stories</h2>
 
     <div id="all-stories"> 
         
+     
 
             {% if all_stories %}
                 {% for story in all_stories %}
@@ -44,5 +48,7 @@
                 <p>No stories are available.</p>
             {% endif %}
         </div>
+
+
 
     {% endblock %}

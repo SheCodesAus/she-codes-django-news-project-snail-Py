@@ -3,5 +3,5 @@
 Hey Hayley, check out my Dango app: https://afternoon-garden-24854.herokuapp.com/news/
 
 
-user: user
+user: admin
 password: password
