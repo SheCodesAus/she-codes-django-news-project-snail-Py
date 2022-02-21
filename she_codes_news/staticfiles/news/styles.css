@@ -1,35 +1,9 @@
-#all-tags {
-    text-align: center;
-}
-
-#all-tags a {
-    color: rgb(150, 146, 146);
-    text-decoration: none;
-    border: solid;
-    border-color:#006466;
-    background-color: #006466;
-    padding: 4px;
-    margin: 1px;
-    border-radius:5%;
-}
-      
-#all-tags a:hover { 
-    font-family: 'Montserrat', sans-serif; 
-    border: solid;
-    border-color:white;
-    border-radius:5%;
-    background: #FDCFA5;
-    color: black;
-    font-weight: bold;
-}
-
-
 .story-card {
     margin: 2px;
-    border: 1px solid #006466;
+    border: 2px solid #006466;
     padding: 5px;
-    radius: 5%;
-  
+    border-radius: 1%;
+    background-color: white;
 }
 
 .story-card-text {
