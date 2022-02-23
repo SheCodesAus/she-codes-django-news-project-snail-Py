@@ -9,6 +9,7 @@
 .story-card-text {
     flex: auto;
     display:flex;
+    background-color: white;
 }
 
 .story-card img {
@@ -78,7 +79,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding:50px;
 }
+
+#all-stories .story-card {
+    flex-basis: 32%;
+    flex-grow: 1;
+    background-color: white;
+    border-color: lightgray;
+    border:solid;
+    border-width: 1px;
+    border-radius: 1%;
+    box-shadow: 10px 10px 8px #888888;
+
+}  
 
 #all-stories .story-card {
     flex-basis: 32%;
@@ -87,10 +101,14 @@
 
 #story-content {
     text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:50px;
 }
 
 #story-content img {
     float: right;
     margin: 0 0 10px 10px;
-    width: 50%;
+    width: 80%;
 }

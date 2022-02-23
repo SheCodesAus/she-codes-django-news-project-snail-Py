@@ -3,7 +3,13 @@
 body {
     background-color: rgb(240, 239, 239);
     margin-top: 150px;
-    padding: 20px;
+    margin-left:0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+html {
+    padding:0px;
 }
 
 header {
@@ -16,6 +22,7 @@ header {
     z-index: 99;
     top: 0;
     width: 100%;
+    height: 100px;
 }
 
 h1 {
@@ -23,7 +30,7 @@ h1 {
     text-decoration: none;
     font-size: 4rem;
     margin: 0;
-    padding:20px;
+    padding-left:50px;
 }
 
 h1 a {
@@ -59,7 +66,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    padding:20px;
+    padding-right:20px;
 }
 
 nav a {
@@ -86,7 +93,7 @@ nav a:hover {
     border-radius:5%;
     background: #FDCFA5;
     color: black; 
-    font-weight: bold;
+    font-weight:bold;
   }
 
 p {
@@ -100,13 +107,13 @@ a {
 }
   
 a:hover {
-    background: #FDCFA5;
     color: black;
     font-weight: bold;
   }
 
-  .all-tags {
+.all-tags {
     text-align: center;
+
 }
 
 .all-tags a {
@@ -130,4 +137,47 @@ a:hover {
     background: #FDCFA5;
     color: black;
     font-weight: bold;
+}
+
+#all-stories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:50px;
+}
+
+#all-stories .story-card {
+    flex-basis: 32%;
+    flex-grow: 1;
+    background-color: white;
+    border-color: lightgray;
+    border:solid;
+    border-width: 1px;
+    border-radius: 1%;
+    box-shadow: 10px 10px 8px #888888;
+}
+
+#story-content {
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:50px;
+}
+
+#story-content img {
+    float: right;
+    margin: 0 0 10px 10px;
+    width: 80%;
+}
+
+footer {
+    background-color: #006466;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100px;    
 }
