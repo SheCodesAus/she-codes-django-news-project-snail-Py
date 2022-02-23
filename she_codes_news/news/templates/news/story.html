@@ -11,8 +11,8 @@
 
     <div style="text-align:center">
         <h2>{{ story.title }}</h2>
-        <h4>Written by: <a href="{% url 'users:profile' story.author.id %}">{{ story.author }}</a></h4>
-        <h4>Published on: {{ story.pub_date|date:'Y-m-d' }}, in <a href="{% url 'news:tag' story.tag %}">{{ story.tag.title }}</a></h4>
+        <h4 class="links">Written by: <a href="{% url 'users:profile' story.author.id %}">{{ story.author }}</a></h4>
+        <h4 class="links">Published on: {{ story.pub_date|date:'Y-m-d' }}, in <a href="{% url 'news:tag' story.tag %}">{{ story.tag.title }}</a></h4>
     </div>
 
 
@@ -22,7 +22,7 @@
                 {{ story.content|linebreaks }}
             
                 {% if request.user.is_authenticated %}
-                <h4><b><a href="{% url 'news:editStory' story.id %}">[Edit this story]</a></b>
+                <h4 class="links"><b><a href="{% url 'news:editStory' story.id %}">[Edit this story]</a></b>
                 {% endif %}
 
                 {% if request.user.is_authenticated %}

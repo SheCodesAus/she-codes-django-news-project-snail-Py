@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Readex+Pro:wght@300&display=swap');
 
 body {
-    background-color: rgb(240, 239, 239);
+    background-color: white;
     margin-top: 150px;
     margin-left:0px;
     margin-right: 0px;
@@ -96,6 +96,18 @@ nav a:hover {
     font-weight:bold;
   }
 
+.links a {
+    fcolor: #006466;
+    font-weight: bold;
+}
+  
+.links a:hover {
+    font-family: 'Montserrat', sans-serif; 
+    background: #FDCFA5;
+    color: black; 
+    font-weight:bold;
+  }
+
 p {
     font-family: 'Montserrat', sans-serif; 
    
@@ -172,12 +184,16 @@ a:hover {
 }
 
 footer {
-    background-color: #006466;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
+    background-color: #FDCFA5;
+    color: black;
+    font-family: 'Montserrat', sans-serif, bold;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height:100px;    
+}
+
+footer img {
+    height:50px;
 }

@@ -91,13 +91,7 @@
     border-width: 1px;
     border-radius: 1%;
     box-shadow: 10px 10px 8px #888888;
-
 }  
-
-#all-stories .story-card {
-    flex-basis: 32%;
-    flex-grow: 1;
-}
 
 #story-content {
     text-align: justify;

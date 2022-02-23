@@ -20,21 +20,6 @@
             </div>
             <br>
 
-{% comment %}         
-            <h2>Latest stories</h2>
-
-
-        <div id="latest-stories">
-
-            {% if latest_stories %}
-                {% for story in latest_stories %}
-                    {% include "./storyCard.html" with story=story position=forloop.counter  %}  
-                {% endfor %}
-            {% else %}
-                <p>No stories are available.</p>
-            {% endif %}
-
-        </div> {% endcomment %}
 
         <h2 style="text-align:center;">Or read all articles:</h2>
 

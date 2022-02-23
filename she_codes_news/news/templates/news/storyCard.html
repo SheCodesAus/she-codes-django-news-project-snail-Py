@@ -3,11 +3,11 @@
         <a href="{% url 'news:story' story.id %}"><img src="{{ story.image }}"></a>
             <div class="story-card-text">
                 <h3><a href="{% url 'news:story' story.id %}">{{ story.title }}</a></h3>
-                <h4>Written by: <a href="{% url 'users:profile' story.author.id %}">{{ story.author }}</a></h4>
-                <h4>Published on: {{ story.pub_date|date:'Y-m-d' }}, in <a href="{% url 'news:tag' story.tag %}">{{ story.tag.title }}</a></h4>
+                <h4 class="links">Written by: <a href="{% url 'users:profile' story.author.id %}">{{ story.author }}</a></h4>
+                <h4 class="links">Published on: {{ story.pub_date|date:'Y-m-d' }}, in <a href="{% url 'news:tag' story.tag %}">{{ story.tag.title }}</a></h4>
 
                 {% if request.user.is_authenticated %}
-                <h4><a href="{% url 'news:editStory' story.id %}">[Edit this story]</a>
+                <h4 class="links"><a href="{% url 'news:editStory' story.id %}">[Edit this story]</a>
                 {% endif %}
                 {% if request.user.is_authenticated %}
                 <a href="{% url 'news:deleteStory' story.id %}">[Delete]</a></h4>  
