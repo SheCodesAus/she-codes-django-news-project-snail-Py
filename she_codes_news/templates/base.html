@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 
 <html lang="en">
@@ -5,9 +7,10 @@
         <meta charset="utf-8">
         <title>She Codes News</title>
         <meta name="description" content="">
-        <meta name="author" content="Hayley van Waas">
-        <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="">
+        <meta name="author" content="Camille le Goff">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Readex+Pro:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+        {% block stylesheets %}{% endblock %}
     </head>
 
     <body>
@@ -17,9 +20,23 @@
                     <h1>She {Codes} News</h1>
                 </a>
             </div>
-            <!-- include nav here -->
+
+            <!-- include side_nav here -->
+            {% include './nav.html' %}
+
         </header>
 
         <!-- content blocks here -->
+        {% block content %}{% endblock %}
+
     </body>
+        <footer>
+            © Camille le Goff | Full stack developer | SEO | She Codes Perth 2022
+            <div class="links"><a href="https://github.com/snail-Py">
+                <img src="/static/news/images/github-logo.png" alt="Snail-py on Github"/> 
+            </a>
+            <a href="https://www.linkedin.com/in/camille-legoff/">
+                <img src="/static/news/images/linkedin-logo.png" alt="Camille le Goff on LinkedIn"/> 
+            </a></div> 
+        </footer>
 </html>

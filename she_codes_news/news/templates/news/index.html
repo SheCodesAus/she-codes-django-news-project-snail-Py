@@ -1,21 +1,41 @@
-    <h2>Latest News</h2>
+    {% extends "base.html"%}
+    {% load static %}
 
-    <div id="latest-stories">
-        {% if latest_stories %}
-            {% for story in latest_stories %}
-                <p>{{ story.title }}</p>
-            {% endfor %}
-        {% else %}
-            <p>No stories are available.</p>
-        {% endif %}
-    </div>
+    {% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+    {% endblock %}
 
-    <div id="all-stories">
-        {% if latest_stories %}
-            {% for story in all_stories %}
-                <p>{{ story.title }}</p>
-            {% endfor %}
-        {% else %}
-            <p>No stories are available.</p>
-        {% endif %}
-    </div>
+    {% block content %}
+    
+    
+
+        <h2 style="text-align:center;">Browse articles by topic:</h2> 
+
+        <div class="all-tags">
+
+            {% for tag in all_tags %}
+            <a href="{% url 'news:tag' tag.slug %}">{{ tag.title }}</a>
+            {% endfor %} 
+
+            </div>
+            <br>
+
+
+        <h2 style="text-align:center;">Or read all articles:</h2>
+
+    <div id="all-stories"> 
+        
+     
+
+            {% if all_stories %}
+                {% for story in all_stories %}
+                    {% include "./storyCard.html" with story=story %}
+                {% endfor %}
+            {% else %}
+                <p>No stories are available.</p>
+            {% endif %}
+        </div>
+
+
+
+    {% endblock %}

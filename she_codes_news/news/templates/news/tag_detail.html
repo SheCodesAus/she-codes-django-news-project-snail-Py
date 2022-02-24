@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 style="text-align:center;">Read all articles about: "{{ tag.title }}"</h2>
+
+<div id="all-stories">
+
+    {% if tag.stories.all %}
+        {% for story in tag.stories.all %}
+            {% include "news/storyCard.html" %}
+        {% endfor %}
+    {% else %}
+        <p>No stories are available.</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,10 @@
+<!-- Edit the code, we want the ability to edit a story using a pre-filled form -->
+
+{% extends "base.html" %}
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
